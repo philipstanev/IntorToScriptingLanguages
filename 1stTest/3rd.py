@@ -10,13 +10,12 @@ def calcRange(a :int, b :int):
     count = 0
     noDiv = True
     for i in range(a, b+1):
-        print(divisorSum(i))
 
         if i == divisorSum(i):
             print(i, end=" ")
             noDiv = False
-        elif i > divisorSum(i):
-            count += 1
+        elif i < divisorSum(i):
+            count = count + 1
     
     if noDiv:
         print("Няма")
